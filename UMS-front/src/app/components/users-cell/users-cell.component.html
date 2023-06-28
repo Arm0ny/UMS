@@ -1,1 +1,9 @@
-<p>users-cell works!</p>
+<tr *ngIf="user">
+  <td class="p-4">{{user.id}}</td>
+  <td class="p-4"><input type="text" [value]="user.username" [(ngModel)]="user.username"/></td>
+  <td class="p-4">{{user.email}}</td>
+  <td class="p-4">{{user.name}}</td>
+  <td class="p-4">{{user.surname}}</td>
+  <td><button (click)="onDelete(user.id)">Delete</button>
+  <td><button (click)="onSave()">Save</button></td>
+</tr>

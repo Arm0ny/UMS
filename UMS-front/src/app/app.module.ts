@@ -9,7 +9,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {SetHeadersInterceptor} from "./interceptors/headers.interceptor";
 import {SetCsrfInterceptor} from "./interceptors/csrf-cookie.interceptor";
 import {CookieService} from "ngx-cookie-service";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './components/login/login.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { UsersCellComponent } from './components/users-cell/users-cell.component';
@@ -28,6 +28,7 @@ import { UsersCellComponent } from './components/users-cell/users-cell.component
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [
     {
