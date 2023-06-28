@@ -1,1 +1,14 @@
-<p>users-table works!</p>
+<table *ngIf="users$ | async as users">
+  <tr class="bg-black text-white">
+    <th class="py-2">id</th>
+    <th class="py-2">username</th>
+    <th class="py-2">email</th>
+    <th class="py-2">name</th>
+    <th class="py-2">surname</th>
+    <th class="py-2">gender</th>
+    <th class="py-2"></th>
+  </tr>
+  <ng-container *ngFor="let user of users">
+    <app-users-cell [user]="user"></app-users-cell>
+  </ng-container>
+</table>
