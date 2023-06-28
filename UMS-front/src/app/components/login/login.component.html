@@ -1,0 +1,37 @@
+<main class="px-6 w-full h-screen flex flex-col items-center justify-center lg:w-1/2 m-auto">
+  <div class="container flex flex-col bg-secondary gap-6 p-6 rounded">
+    <header class="text-center">Sign-in</header>
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      class="flex flex-col gap-6 justify-center items-center p-6"
+    >
+      <input
+        type="text"
+        formControlName="username"
+        required
+        placeholder="Username"
+        class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner"
+      />
+      <input
+        type="password"
+        formControlName="password"
+        required
+        placeholder="Password"
+        class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner"
+      />
+      <span class="flex gap-4 justify-between items-center w-full md:w-1/2">
+        <a
+          class=""
+          routerLink="/sign-up"
+        >
+          Sign-up
+        </a>
+        <button type="submit" class="p-4 bg-accent rounded text-secondary">
+          Sign-in
+        </button></span
+      >
+    </form>
+  </div>
+</main>
+<p>login works!</p>

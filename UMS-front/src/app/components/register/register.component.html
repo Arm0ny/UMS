@@ -1,0 +1,19 @@
+<div class="container flex flex-col bg-secondary gap-6 p-6 rounded">
+  <header class="text-center">Sign-up</header>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-6 justify-center items-center p-6">
+    <input type="text" formControlName="name" required placeholder="First Name" class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner">
+    <input type="text" formControlName="surname" required placeholder="Last Name" class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner">
+    <select formControlName="gender">
+      <option [ngValue]="'M'" >Male</option>
+      <option [ngValue]="'F'">Female</option>
+    </select>
+    <input type="text" formControlName="username" required placeholder="User" class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner">
+    <input type="text" formControlName="email" required placeholder="email" class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner">
+    <input type="password" formControlName="password" required placeholder="password" class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner">
+    <input type="password" formControlName="password_confirmation" required placeholder="confirm password" class="py-4 px-4 rounded-full bg-[#F4F6FF] shadow-inner">
+    <span class="flex justify-between items-center w-full md:w-1/2">
+        <a routerLink="/sign-in">Sign-in</a>
+        <button type="submit"  class=" p-4  bg-[#3D5AF1] rounded text-secondary">Done !</button>
+      </span>
+  </form>
+</div>
