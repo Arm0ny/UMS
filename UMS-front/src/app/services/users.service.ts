@@ -31,4 +31,9 @@ export class UsersService {
   deleteUser(userId: number) {
     return this.http.delete(`${this.baseUrl}/user/${userId}`)
   }
+
+  updateUser(user: UserInterface): Observable<any> {
+    const url = `${this.baseUrl}/user/${user.id}`;
+    return this.http.put(url, user);
+  }
 }

@@ -25,4 +25,16 @@ export class HomeComponent implements OnInit {
 
     this.usersService.setUsers()
   }
+
+  onSave(user: UserInterface) {
+    this.usersService.updateUser(user).subscribe(
+      res => console.log(res)
+    );
+    this.usersService.setUsers()
+
+  }
+
+  onPasswordReset(){
+
+  }
 }

@@ -7,17 +7,28 @@
       <th class="py-2">name</th>
       <th class="py-2">surname</th>
       <th class="py-2"></th>
+      <th class="py-2"></th>
     </tr>
       <tr  *ngFor="let user of users" class="bg-slate-100">
         <td class="p-4">{{user.id}}</td>
-        <td class="p-4"><input type="text" [value]="user.username">{{user.username}}</td>
-        <td class="p-4">{{user.email}}</td>
-        <td class="p-4">{{user.name}}</td>
-        <td class="p-4">{{user.surname}}</td>
+        <td class="p-4">
+          <input type="text" [value]="user.username" [(ngModel)]="user.username" />
+        </td>
+        <td class="p-4">
+          <input type="text" [value]="user.email" [(ngModel)]="user.email" />
+        </td>
+        <td class="p-4">
+          <input type="text" [value]="user.name" [(ngModel)]="user.name" />
+        </td>
+        <td class="p-4">
+          <input type="text" [value]="user.surname" [(ngModel)]="user.surname" />
+        </td>
         <td class="p-4">
           <button (click)="onDelete(user.id)" class="px-4 py-2 bg-red-500 text-white">Delete</button>
         </td>
-
+        <td class="p-4">
+          <button (click)="onSave(user)" class="px-4 py-2 bg-blue-500 text-white">Save</button>
+        </td>
       </tr>
   </table>
 </main>

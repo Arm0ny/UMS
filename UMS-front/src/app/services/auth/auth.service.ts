@@ -72,11 +72,7 @@ export class AuthService {
     return this.http.get<UserInterface>(this.baseUrl + '/api/user/' + user_id);
   }
 
-  updateUser(user_id: number, updateObj: object) {
-    return this.http.put(this.baseUrl + '/api/user/' + user_id, updateObj);
-  }
-
   index(): Observable<UserInterface[]> {
-    return this.http.get<UserInterface[]>(this.baseUrl + '/api/users');
+    return this.http.get<UserInterface[]>(this.baseUrl + '/api/user');
   }
 }

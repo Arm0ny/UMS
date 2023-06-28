@@ -23,7 +23,6 @@ Route::prefix('user')->group(function(){
     Route::get('/', [UserController::class, 'index']);
     Route::get('/{id}', [UserController::class, 'show']);
     Route::get('/{gender}', [UserController::class, 'getByGender']);
-    Route::middleware('auth:sanctum')->put('/{id}', [UserController::class, 'update']);
+    Route::put('/{id}', [UserController::class, 'update']);
     Route::delete('/{id}', [UserController::class, 'destroy']);
-
 });
